@@ -9,3 +9,7 @@ Cardinal取名自《刀剑神域》中的中枢程序，是一个可以使用内
 4. 提供图形化工具，方便图包制作
 
 ### Cardinal 的 Unusual 等你来发现！
+
+访问网站：(运营商会投毒，选择快速的访问，实在不行直接看仓库的md文档)  
+[https://cardinal-wiki.netlify.app/#/](https://cardinal-wiki.netlify.app/#/)  
+[https://cardinal-designer.github.io/Cardinal-Designer/#/](https://cardinal-designer.github.io/Cardinal-Designer/#/)
