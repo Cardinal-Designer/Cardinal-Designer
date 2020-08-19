@@ -54,6 +54,9 @@
 
       function Change() {
         if (debug() == false) {
+          while(document.readyState != "complete"){
+            await;
+          }
           var Front =
             "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
           try {
