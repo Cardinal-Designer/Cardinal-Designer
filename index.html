@@ -60,9 +60,8 @@
         var cycle = setInterval(function () {
           if (document.readyState = "complete") {
             Change();
-            clearInterval(cycle);
           }
-        }, 500);
+        }, 1000);
       }
 
       function Change() {
@@ -82,7 +81,7 @@
         }
       }
 
-      window.onhashchange = C;
+      C();
     </script>
   </body>
 </html>
