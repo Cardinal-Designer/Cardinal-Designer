@@ -42,10 +42,10 @@
       function debug() {
         var h = window.document.location.href;
         var list = new Array();
-        list = ["localhost", "127.0.0.1"];
+        list = ["localhost",'127.0.0.1'];
         length = list.length;
         for (var i = 0; i < length; i++) {
-          if (h.indexOf(list[i] != -1)) {
+          if (h.indexOf(list[i]) != -1) {
             return true;
           }
         }
@@ -53,7 +53,7 @@
       }
 
       function Change() {
-        if (!debug()) {
+        if (debug() == false) {
           var Front =
             "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
           try {
