@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     <meta charset="UTF-8" />
     <title>Cardinal文档</title>
@@ -22,66 +22,33 @@
         repo: "https://github.com/Cardinal-Designer/",
         coverpage: true,
         loadSidebar: true,
+        loadNavbar: true,
+        subMaxLevel: 5,
+
+        search: "auto", // 默认值
+
+        search: [
+          "/",
+          "/docs/项目需求分析手册/",
+          "/docs/图包制作前期准备/"
+        ],
+
+        // 完整配置参数
+        search: {
+          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+          paths: 'auto', // or 'auto'
+          placeholder: "输入搜索",
+
+          noData: "诶,数据君不见了？",
+
+          // 搜索标题的最大层级, 1 - 6
+          depth: 6,
+        },
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-
-    <!-- <script>
-      function sleep(time) {
-        return new Promise((resolve) => setTimeout(resolve, time));
-      }
-
-      function Get_root() {
-        var strFullPath = window.document.location.href;
-        var pos = strFullPath.indexOf("/");
-        var second = strFullPath.slice(pos + 2);
-        var L_second = second.indexOf("/");
-        var index = L_second + pos + 2;
-        var root = strFullPath.slice(0, index);
-        return root;
-      }
-
-      var root = Get_root();
-
-      function debug() {
-        var h = window.document.location.href;
-        var list = new Array();
-        list = ["localhost", "127.0.0.1"];
-        length = list.length;
-        for (var i = 0; i < length; i++) {
-          if (h.indexOf(list[i]) != -1) {
-            return true;
-          }
-        }
-        return false;
-      }
-
-      function C() {
-        var cycle = setInterval(function () {
-          if (document.readyState = "complete") {
-            Change();
-          }
-        }, 1000);
-      }
-
-      function Change() {
-        if (debug() == false) {
-          var Front =
-            "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
-          try {
-            var img_list = window.document.getElementsByTagName("img");
-            var length = img_list.length;
-            for (var i = 0; i < length; i++) {
-              img_list[i].src = img_list[i].src.replace(root, Front);
-            }
-            console.log(img_list[1].src);
-          } catch {
-            console.log("Not found images.");
-          }
-        }
-      }
-
-      C();
-    </script> -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
   </body>
 </html>

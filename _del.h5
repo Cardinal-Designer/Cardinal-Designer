@@ -1,0 +1,57 @@
+<!-- <script>
+      function sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+      }
+
+      function Get_root() {
+        var strFullPath = window.document.location.href;
+        var pos = strFullPath.indexOf("/");
+        var second = strFullPath.slice(pos + 2);
+        var L_second = second.indexOf("/");
+        var index = L_second + pos + 2;
+        var root = strFullPath.slice(0, index);
+        return root;
+      }
+
+      var root = Get_root();
+
+      function debug() {
+        var h = window.document.location.href;
+        var list = new Array();
+        list = ["localhost", "127.0.0.1"];
+        length = list.length;
+        for (var i = 0; i < length; i++) {
+          if (h.indexOf(list[i]) != -1) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      function C() {
+        var cycle = setInterval(function () {
+          if (document.readyState = "complete") {
+            Change();
+          }
+        }, 1000);
+      }
+
+      function Change() {
+        if (debug() == false) {
+          var Front =
+            "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
+          try {
+            var img_list = window.document.getElementsByTagName("img");
+            var length = img_list.length;
+            for (var i = 0; i < length; i++) {
+              img_list[i].src = img_list[i].src.replace(root, Front);
+            }
+            console.log(img_list[1].src);
+          } catch {
+            console.log("Not found images.");
+          }
+        }
+      }
+
+      C();
+    </script> -->
