@@ -27,6 +27,10 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
     <script>
+      function sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+      }
+
       function Get_root() {
         var strFullPath = window.document.location.href;
         var pos = strFullPath.indexOf("/");
@@ -42,7 +46,7 @@
       function debug() {
         var h = window.document.location.href;
         var list = new Array();
-        list = ["localhost",'127.0.0.1'];
+        list = ["localhost","127.0.0.1"];
         length = list.length;
         for (var i = 0; i < length; i++) {
           if (h.indexOf(list[i]) != -1) {
@@ -52,15 +56,21 @@
         return false;
       }
 
+      function C() {
+        sleep(500).then(() => {
+          if (document.readyState != "complete") {
+            C();
+          } else {
+            Change();
+          }
+        });
+      }
+
       function Change() {
         if (debug() == false) {
-          while(document.readyState != "complete"){
-            continue;
-          }
           var Front =
             "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
           try {
-            console.log("aaa");
             var img_list = window.document.getElementsByTagName("img");
             var length = img_list.length;
             for (var i = 0; i < length; i++) {
@@ -68,11 +78,12 @@
             }
             console.log(img_list[1].src);
           } catch {
-            console.log("No images");
+            console.log("Not found images.");
           }
         }
       }
-      window.onhashchange = Change;
+
+      window.onhashchange = C;
     </script>
   </body>
 </html>
