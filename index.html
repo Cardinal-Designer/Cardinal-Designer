@@ -1,23 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Cardinal文档</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'Cardinal',
-      repo: 'https://github.com/Cardinal-Designer/',
-      coverpage: true,
-      loadSidebar: true,
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cardinal文档</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        name: "Cardinal",
+        repo: "https://github.com/Cardinal-Designer/",
+        coverpage: true,
+        loadSidebar: true,
+      };
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+    <script>
+      function Get_root() {
+        var strFullPath = window.document.location.href;
+        var pos = strFullPath.indexOf("/");
+        var second = strFullPath.slice(pos + 2);
+        var L_second = second.indexOf("/");
+        var index = L_second + pos + 2;
+        var root = strFullPath.slice(0, index);
+        return root;
+      }
+
+      var root = Get_root();
+      function debug() {
+        var h = window.document.location.href;
+        var list = new Array();
+        list = ["localhost", "127.0.0.1"];
+        length = list.length;
+        for (var i = 0; i < length; i++) {
+          if (h.indexOf(list[i])) {
+            return true;
+          }
+        }
+        return false;
+      }
+      function Change() {
+        if (!debug()) {
+          var Front =
+            "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
+          try {
+            console.log("aaa");
+            var img_list = window.document.getElementsByTagName("img");
+            var length = img_list.length;
+            for (var i = 0; i < length; i++) {
+              img_list[i].src = img_list[i].src.replace(root, Front);
+            }
+            console.log(img_list[1].src);
+          } catch {
+            console.log("No images");
+          }
+        }
+      }
+      window.onhashchange = Change;
+    </script>
+  </body>
 </html>

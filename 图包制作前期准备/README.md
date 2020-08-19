@@ -54,11 +54,3 @@ Spine菜单 > 导出数据
 这种具有固定字符串宽度的数字表示方式叫有格式字符串表示数
 
 自然<无格式数字>就是0,1,2,3 ...... 10,11,12这种朴素计数表示。
-
-
-img_list = window.document.getElementsByTagName("img");
-var length = img_list.length;
-var Front = "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
-for(var i = 0;i<length;i++){
-  img_list[i].src = Front + img_list[i].src;
-}
