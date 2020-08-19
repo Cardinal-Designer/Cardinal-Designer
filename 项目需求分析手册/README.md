@@ -10,10 +10,10 @@ example(举个栗子)：
 你写Issues，我做(皮)  
 
 # 设计想法
-本项目采用MVC设计哲学 [不完全遵照]
+## 本项目采用MVC设计哲学 [不完全遵照]
 
 > MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。
 
 本来整Django看到的设计模式，忽然觉得可以用来组织Cardinal的代码，于是在开发时将人物(model) 与 程序本身(controller) 分离，由controller直接接管view，人物配置同样是controller解析，这样在更改代码时只需要更改controller而无需顾及其他部分。
 
-## Okey，Enjoy this.
+**Okey，Enjoy this.**

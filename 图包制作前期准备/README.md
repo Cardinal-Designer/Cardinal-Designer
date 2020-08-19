@@ -17,7 +17,7 @@
 由于我只有[DragonBone](http://www.dragonbones.com)和[Spine](http://zh.esotericsoftware.com/)所以只能使用这两款软件演示
 
 
-### DragonBone：
+## DragonBone
 文件 > 导出
 ![img](Dragonbone导出1.png)
 选择图片
@@ -26,7 +26,7 @@
 根据需要进行导出，最好设置一下<图片包含>参数 自定义输出大小和起始绘制坐标，使得人物最终显示在图片正中
 
 
-### Spine：
+## Spine
 Spine菜单 > 导出数据
 ![img](Spine导出1.png)
 选择png格式
@@ -39,6 +39,7 @@ Spine菜单 > 导出数据
 # 帧序列命名注意
 按照<前导字符串><无格式数字><后导字符串>的形式命名每一张图片。
 例子：F(1).png
+
 |<前导字符串>|<无格式数字>|<后导字符串>|
 |-|-|-|
 |F(|1|).png|
@@ -52,4 +53,12 @@ Spine菜单 > 导出数据
 0001 0002 0003 ...... 0010  
 这种具有固定字符串宽度的数字表示方式叫有格式字符串表示数
 
-自然<无格式数字>就是0,1,2,3 ...... 10,11,12这种阿拉伯数字表示。
+自然<无格式数字>就是0,1,2,3 ...... 10,11,12这种朴素计数表示。
+
+
+img_list = window.document.getElementsByTagName("img");
+var length = img_list.length;
+var Front = "https://cdn.jsdelivr.net/gh/Cardinal-Designer/Cardinal-Designer/";
+for(var i = 0;i<length;i++){
+  img_list[i].src = Front + img_list[i].src;
+}
