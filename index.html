@@ -46,7 +46,7 @@
       function debug() {
         var h = window.document.location.href;
         var list = new Array();
-        list = ["localhost","127.0.0.1"];
+        list = ["localhost", "127.0.0.1"];
         length = list.length;
         for (var i = 0; i < length; i++) {
           if (h.indexOf(list[i]) != -1) {
@@ -57,13 +57,12 @@
       }
 
       function C() {
-        sleep(500).then(() => {
-          if (document.readyState != "complete") {
-            C();
-          } else {
+        var cycle = setInterval(function () {
+          if (document.readyState = "complete") {
             Change();
+            clearInterval(cycle);
           }
-        });
+        }, 500);
       }
 
       function Change() {
