@@ -1,6 +1,6 @@
 # 图包制作前期准备
 ## 制作工具
-我们推荐[DragonBone](http://www.dragonbones.com)和[Spine](http://zh.esotericsoftware.com/)  
+推荐[DragonBone](http://www.dragonbones.com)和[Spine](http://zh.esotericsoftware.com/)  
 这是两款优秀的人物动画制作工具，不必二者皆用，请选择适合自己的软件。(完全可以不拘泥于这两款软件)
 
 细节处理软件包含Photoshop、GIMP或其他你熟知的软件
@@ -13,7 +13,7 @@
 发挥你的创造力。
 
 ## 导出
-由于我只有[DragonBone](http://www.dragonbones.com)和[Spine](http://zh.esotericsoftware.com/)所以只能使用这两款软件演示
+这里使用[DragonBone](http://www.dragonbones.com)和[Spine](http://zh.esotericsoftware.com/)演示
 
 
 ### DragonBone
@@ -55,7 +55,7 @@ Spine菜单 > 导出数据
 0001 0002 0003 ...... 0010  
 这种具有**固定字符串宽度**的数字表示方式叫有格式字符串表示数
 
-自然 **<无格式数字>** 就是0,1,2,3 ...... 10,11,12这种朴素计数表示。
+自然 **<无格式数字>** 就是0,1,2,3 ...... 10,11,12这种普通数字书写方法。
 
 形如：
 ![img](帧序列形式图.png)
